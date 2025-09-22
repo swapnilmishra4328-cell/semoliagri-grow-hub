@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Semoliagri</string>
+    <string name="title_activity_main">Semoliagri</string>
+    <string name="package_name">com.Semoliagri</string>
+    <string name="custom_url_scheme">com.Semoliagri</string>
+</resources>

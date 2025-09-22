@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SEMOLIAGRI Design System - Agriculture-themed professional design */
+
+@layer base {
+  :root {
+    /* Base colors - Clean whites and darks */
+    --background: 0 0% 100%;
+    --foreground: 210 15% 15%;
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 15%;
+
+    /* Popover system */
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 15%;
+
+    /* Primary - Deep forest green for agriculture theme */
+    --primary: 150 60% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 150 50% 35%;
+    --primary-dark: 150 70% 20%;
+
+    /* Secondary - Warm earth brown */
+    --secondary: 30 25% 85%;
+    --secondary-foreground: 30 45% 20%;
+    --secondary-dark: 30 35% 25%;
+
+    /* Accent - Golden wheat */
+    --accent: 45 85% 70%;
+    --accent-foreground: 45 40% 15%;
+    --accent-dark: 45 75% 50%;
+
+    /* Muted tones */
+    --muted: 150 15% 92%;
+    --muted-foreground: 150 10% 45%;
+
+    /* Utility colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 150 60% 50%;
+    --success-foreground: 0 0% 98%;
+
+    /* UI elements */
+    --border: 150 20% 88%;
+    --input: 150 20% 88%;
+    --ring: 150 60% 25%;
+
+    /* Agriculture-specific gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(150 60% 25%), hsl(150 50% 35%));
+    --gradient-earth: linear-gradient(135deg, hsl(30 35% 25%), hsl(45 75% 50%));
+    --gradient-field: linear-gradient(180deg, hsl(150 40% 40%), hsl(150 60% 25%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(150 15% 96%));
+
+    /* Shadows for depth */
+    --shadow-soft: 0 2px 8px hsl(150 30% 15% / 0.1);
+    --shadow-medium: 0 4px 20px hsl(150 30% 15% / 0.15);
+    --shadow-strong: 0 8px 32px hsl(150 30% 15% / 0.2);
+    --shadow-glow: 0 0 20px hsl(150 60% 25% / 0.3);
+
+    /* Professional spacing and timing */
+    --radius: 0.75rem;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 150 30% 8%;
+    --foreground: 150 10% 92%;
+    --card: 150 25% 12%;
+    --card-foreground: 150 10% 92%;
+    --popover: 150 25% 12%;
+    --popover-foreground: 150 10% 92%;
+    --primary: 150 60% 35%;
+    --primary-foreground: 150 30% 8%;
+    --secondary: 150 20% 20%;
+    --secondary-foreground: 150 10% 92%;
+    --muted: 150 20% 16%;
+    --muted-foreground: 150 8% 60%;
+    --accent: 45 85% 60%;
+    --accent-foreground: 45 40% 15%;
+    --border: 150 20% 20%;
+    --input: 150 20% 20%;
+    --ring: 150 60% 35%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Agriculture-specific utilities */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .earth-gradient {
+    background: var(--gradient-earth);
+  }
+
+  .field-gradient {
+    background: var(--gradient-field);
+  }
+
+  .subtle-gradient {
+    background: var(--gradient-subtle);
+  }
+}
+
+@layer components {
+  /* Professional button variants */
+  .btn-hero {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all duration-300;
+  }
+
+  .btn-outline-primary {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  .btn-accent {
+    @apply bg-accent hover:bg-accent-dark text-accent-foreground shadow-md transition-all duration-300;
+  }
+
+  /* Card components */
+  .service-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-medium transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .product-card {
+    @apply bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-medium transition-all duration-300 hover:-translate-y-1;
+  }
+
+  /* Professional form styling */
+  .form-input {
+    @apply w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200;
+  }
+
+  .form-textarea {
+    @apply w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 resize-y min-h-[120px];
+  }
+}
